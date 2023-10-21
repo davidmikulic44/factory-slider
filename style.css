@@ -41,14 +41,18 @@ header .empty-header-2 {
 main {
     background-color: var(--test-color-1);
     width: 941px;
+    height: auto;
     margin: auto;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
 }
-
 .top-slider {
     display: flex;
     flex-direction: row;
     position: relative;
-    right: 1200px;
+    margin-right: 10px;
 }
 
 .bottom-slider {
@@ -63,7 +67,7 @@ main {
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
-    background: cover no-repeat;
+    margin: 10px 10px;
 }
 
 .bottom-single-slide img{
