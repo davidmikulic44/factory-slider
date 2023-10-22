@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
+
 }
 
 
@@ -26,7 +26,7 @@ body {
     max-width: 941px;
     display: flex;
     justify-content: center;
-    overflow:hidden;
+    overflow: visible;
 }
 
 .content-container {
@@ -35,7 +35,7 @@ body {
     justify-content: flex-end;
     flex-direction: column;
     align-items: flex-start;
-    overflow: visible;
+    overflow: hidden;
     margin-top: 60px;
     margin-bottom: 60px;
     height: auto;
@@ -161,26 +161,28 @@ body {
 }
 
 #next {
-    background-image: url(assets/arrow-blue-right.png);
+    background-image: url(assets/arrow-gray-right.png);
     width: 60px;
     height: 60px;
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px solid #134880;
+    border: 1px solid var(--background-color-secondary);
     background-color: var(--background-color-primary);
     border-radius: 5px;
-
+    opacity: 0.8;
+    transition: all 0.3s;
 }
 
 #previous {
-    background-image: url(assets/arrow-blue-left.png);
+    background-image: url(assets/arrow-gray-left.png);
     width: 60px;
     height: 60px;
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px solid var(--foreground-color-secondary);
+    border: 1px solid var(--background-color-secondary);
     background-color: var(--background-color-primary);
     border-radius: 5px;
-
+    opacity: 0.8;
+    transition: all 0.3s;
 }
 
