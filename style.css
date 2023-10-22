@@ -27,6 +27,15 @@ body {
     display: flex;
     justify-content: center;
     overflow: visible;
+    width: 941px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    height: auto;
 }
 
 .content-container {
@@ -41,19 +50,22 @@ body {
     height: auto;
 }
 
-.header-empty-1, .header-empty-2{
+.header{
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     height: 100px;
     background-color: var(--background-color-primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.header-empty-1 {
+.header--small {
     width: 301px;
     background-color: var(--background-color-secondary);
 }
 
-.header-empty-2 {
+.header--big {
     width: 621px;
     background-color: var(--background-color-secondary);
     margin-left: 20px;
