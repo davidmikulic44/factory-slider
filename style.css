@@ -122,6 +122,7 @@ body {
     background: var(--background-color-primary);
     margin-left: 100px;
     float: right;
+    gap: 10px;
 }
 
 .text-container {
@@ -168,7 +169,7 @@ body {
     border: 1px solid #134880;
     background-color: var(--background-color-primary);
     border-radius: 5px;
-    margin: 10px;
+
 }
 
 #previous {
@@ -180,6 +181,6 @@ body {
     border: 1px solid var(--foreground-color-secondary);
     background-color: var(--background-color-primary);
     border-radius: 5px;
-    margin: 10px;
+
 }
 
