@@ -1,6 +1,5 @@
 $(document).ready(function() {
-    // Širina slike
-    var animationSpeed = 500; // Brzina animacije
+    var animationSpeed = 500;
 
     var $topSlider = $('.top-slider');
     var $bottomSlider = $('.bottom-slider');

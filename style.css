@@ -84,15 +84,28 @@ body {
 }
 
 .top-slider {
-    overflow: visible;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    position: relative;
     margin-right: 50px;
     gap: 10px;
     flex-wrap: nowrap;
     margin-bottom: 5px;
+    left: 0px;
+}
+
+.top-slider-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+.bottom-slider {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: nowrap;
     left: 0px;
 }
 
@@ -104,14 +117,6 @@ body {
     gap: 100px;
     margin-right: 50px;
     margin-top: 5px;
-}
-
-.bottom-slider {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    flex-wrap: nowrap;
-    left: 0px;
 }
 
 .button-container {
