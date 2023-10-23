@@ -24,7 +24,7 @@ body {
     max-width: 941px;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible;
     justify-content: flex-end;
     flex-direction: row;
     align-items: flex-start;
@@ -161,7 +161,7 @@ body {
     height: 156px;
 }
 
-#button-container button {
+.button-container button {
     border: 1px solid var(--background-color-secondary);
     background-color: var(--background-color-primary);
     border-radius: 5px;
@@ -173,9 +173,9 @@ body {
 }
 
 #next {
-    background-image: url(assets/arrow-gray-right.png);
+    background-image: url(../assets/arrow-gray-right.png);
 }
 
 #previous {
-    background-image: url(assets/arrow-gray-left.png);
+    background-image: url(../assets/arrow-gray-left.png);
 }
