@@ -28,11 +28,9 @@ body {
     justify-content: center;
     overflow: visible;
     width: 941px;
-    display: flex;
     justify-content: flex-end;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    overflow: hidden;
     margin-top: 60px;
     margin-bottom: 60px;
     height: auto;
@@ -44,7 +42,7 @@ body {
     justify-content: flex-end;
     flex-direction: column;
     align-items: flex-start;
-    overflow: hidden;
+    overflow: visible;
     margin-top: 60px;
     margin-bottom: 60px;
     height: auto;
@@ -71,6 +69,19 @@ body {
     margin-left: 20px;
 }
 
+.footer {
+    width: 941px;
+    height: 100px;
+    right: 0;
+    bottom: 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: var(--background-color-secondary);
+    margin-top: auto;
+    align-self: center;
+}
+
+
 .slider {
     background-color: var(--background-color-primary);
     width: 941px;
@@ -95,35 +106,25 @@ body {
     position: relative;
     margin-right: 50px;
     gap: 10px;
-}
-
-
-.bottom-slider {
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    float: left;
+    flex-wrap: nowrap;
+    margin-bottom: 5px;
 }
 
 .bottom-slider-wrapper {
     display: flex;
     flex-direction: row;
-    margin-right: 405px;
-    margin-top: -90px;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 100px;
+    margin-right: 50px;
+    margin-top: 5px;
 }
 
-
-.footer {
-    width: 941px;
-    height: 100px;
-    right: 0;
-    bottom: 0px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    background-color: var(--background-color-secondary);
-    margin-top: auto;
-    align-self: center;
+.bottom-slider {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: nowrap;
 }
 
 .button-container {
@@ -132,8 +133,6 @@ body {
     align-items: center;
     width: 60px;
     background: var(--background-color-primary);
-    margin-left: 100px;
-    float: right;
     gap: 10px;
 }
 
@@ -171,6 +170,7 @@ body {
     width: 300px;
     height: 156px;
 }
+
 
 #next {
     background-image: url(assets/arrow-gray-right.png);
