@@ -16,9 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
-
 
 .container {
     position: relative;
@@ -26,7 +24,7 @@ body {
     max-width: 941px;
     display: flex;
     justify-content: center;
-    overflow: visible;
+    overflow: hidden;
     width: 941px;
     justify-content: flex-end;
     flex-direction: row;
@@ -36,19 +34,7 @@ body {
     height: auto;
 }
 
-.content-container {
-    width: 941px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: flex-start;
-    overflow: visible;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    height: auto;
-}
-
-.header{
+.header {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     height: 100px;
@@ -80,7 +66,6 @@ body {
     margin-top: auto;
     align-self: center;
 }
-
 
 .slider {
     background-color: var(--background-color-primary);
@@ -156,7 +141,6 @@ body {
     width: 333px;
     height: 120px;
     overflow-wrap: normal;
-    
 }
 
 .text-container p {
@@ -171,30 +155,22 @@ body {
     height: 156px;
 }
 
-
-#next {
-    background-image: url(assets/arrow-gray-right.png);
-    width: 60px;
-    height: 60px;
-    background-repeat: no-repeat;
-    background-position: center;
+#button-container button {
     border: 1px solid var(--background-color-secondary);
     background-color: var(--background-color-primary);
     border-radius: 5px;
     opacity: 0.8;
     transition: all 0.3s;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+}
+
+#next {
+    background-image: url(assets/arrow-gray-right.png);
 }
 
 #previous {
     background-image: url(assets/arrow-gray-left.png);
-    width: 60px;
-    height: 60px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 1px solid var(--background-color-secondary);
-    background-color: var(--background-color-primary);
-    border-radius: 5px;
-    opacity: 0.8;
-    transition: all 0.3s;
 }
-
