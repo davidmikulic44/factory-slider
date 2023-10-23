@@ -1,6 +1,7 @@
 $(document).ready(function() {
-    var imageWidth = $('.image').first().width(); // Širina slike
+    // Širina slike
     var animationSpeed = 500; // Brzina animacije
+    var isAnimating = false;
     var currentSlide = 0; // Trenutna slika
 
     var $topSlider = $('.top-slider');
@@ -23,18 +24,20 @@ $(document).ready(function() {
     // Funkcija za pomicanje slika u desno
     function moveRight($slider) {
         var $firstImage = $slider.children().first();
+        var imageWidth = $firstImage.first().width();
 
-        $slider.css('left', imageWidth);
-
-        $slider.animate({ 'left': 0 });
-
-        $firstImage.fadeIn(animationSpeed, function() {
+        $slider.css('left', 0).animate({ 'left': -imageWidth }, animationSpeed, function() {
             $slider.append($firstImage);
-        })
+            $firstImage.css('opacity', 0).animate({ 'opacity': 1 });
+            $('#previous').css('pointer-events', 'auto');
+            $slider.css('left', '0px');
+        });
     }
 
     // Klik na strelicu za pomicanje u lijevo
     $('#previous').on('click', function() {
+
+        $('#previous').css('pointer-events', 'none');
         moveRight($topSlider);
         moveRight($bottomSlider);
     });
