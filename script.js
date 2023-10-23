@@ -1,51 +1,54 @@
 $(document).ready(function() {
     // Širina slike
     var animationSpeed = 500; // Brzina animacije
-    var isAnimating = false;
-    var currentSlide = 0; // Trenutna slika
 
     var $topSlider = $('.top-slider');
     var $bottomSlider = $('.bottom-slider');
 
-    // Funkcija za pomicanje slika u lijevo
-    function moveLeft($slider) {
+    function moveImagesRight($slider) {
         var $lastImage = $slider.children().last();
-        $slider.css('left', -imageWidth);
-        $slider.animate({ 'left': 0 });
-        $lastImage.fadeOut(500, function() {
-            $slider.prepend($lastImage);
+        var imageWidth = $lastImage.width();
 
-            $lastImage.fadeIn(animationSpeed, function() {
+        $lastImage.css({ 'opacity': 1, 'width': imageWidth })
+            .animate({ 'opacity': 0, 'width': 0 }, animationSpeed, function() {
+
+                $slider.prepend($lastImage);
                 $lastImage.show();
-            })
-        });
+                $lastImage.css({ 'opacity': 1, 'width': imageWidth });
+                $slider.css({ 'left': -imageWidth }).animate({ 'left': 0 }, animationSpeed);
+
+                $('#next').css({ 'pointer-events': 'auto' });
+            });
     }
 
-    // Funkcija za pomicanje slika u desno
-    function moveRight($slider) {
+
+    function moveImagesLeft($slider) {
         var $firstImage = $slider.children().first();
-        var imageWidth = $firstImage.first().width();
+        var imageWidth = $firstImage.width();
 
-        $slider.css('left', 0).animate({ 'left': -imageWidth }, animationSpeed, function() {
+        $slider.css({ 'left': 0 }).animate({ 'left': -imageWidth }, animationSpeed, function() {
             $slider.append($firstImage);
-            $firstImage.css('opacity', 0).animate({ 'opacity': 1 });
-            $('#previous').css('pointer-events', 'auto');
-            $slider.css('left', '0px');
+            $firstImage.css({ 'opacity': 0, 'width': 0 }).animate({ 'opacity': 1, 'width': imageWidth });
+
+            $slider.css({ 'left': '0px' });
+            $('#previous').css({ 'pointer-events': 'auto' });
         });
     }
 
-    // Klik na strelicu za pomicanje u lijevo
-    $('#previous').on('click', function() {
 
+    $('#previous').on('click', function() {
         $('#previous').css('pointer-events', 'none');
-        moveRight($topSlider);
-        moveRight($bottomSlider);
+        moveImagesLeft($topSlider);
+        $('#previous').css('pointer-events', 'none');
+        moveImagesLeft($bottomSlider);
     });
 
-    // Klik na strelicu za pomicanje u desno
+
     $('#next').on('click', function() {
-        moveLeft($topSlider);
-        moveLeft($bottomSlider);
+        $('#next').css('pointer-events', 'none');
+        moveImagesRight($topSlider);
+        $('#next').css('pointer-events', 'none');
+        moveImagesRight($bottomSlider);
     });
 
     $('#next').hover(

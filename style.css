@@ -86,13 +86,14 @@ body {
 .top-slider {
     overflow: visible;
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     position: relative;
     margin-right: 50px;
     gap: 10px;
     flex-wrap: nowrap;
     margin-bottom: 5px;
-    transition: margin-left 1s cubic-bezier();
+    left: 0px;
 }
 
 .bottom-slider-wrapper {
@@ -110,6 +111,7 @@ body {
     justify-content: flex-end;
     gap: 10px;
     flex-wrap: nowrap;
+    left: 0px;
 }
 
 .button-container {
