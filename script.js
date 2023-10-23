@@ -13,7 +13,6 @@ $(document).ready(function() {
             .animate({ 'opacity': 0, 'width': 0 }, animationSpeed, function() {
 
                 $slider.prepend($lastImage);
-                $lastImage.show();
                 $lastImage.css({ 'opacity': 1, 'width': imageWidth });
                 $slider.css({ 'left': -imageWidth }).animate({ 'left': 0 }, animationSpeed);
 
