@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&family=Roboto+Mono:wght@300&family=Source+Sans+3:wght@700&display=swap');
+
 :root {
     --background-color-primary: #fff;
     --background-color-secondary: #ddd;
@@ -11,7 +13,7 @@
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     display: flex;
     align-items: center;
     flex-direction: column;
