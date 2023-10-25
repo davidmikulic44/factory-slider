@@ -41,29 +41,4 @@ $(document).ready(function() {
         moveImagesRight($topSlider);
         moveImagesRight($bottomSlider);
     });
-
-    $('#next').hover(
-        function() {
-            $(this).css('background-image', 'url(../assets/arrow-blue-right.png');
-            $(this).css('border', '1px solid var(--foreground-color-primary)');
-            $(this).css('cursor', 'pointer');
-        },
-
-        function() {
-            $(this).css('background-image', 'url(../assets/arrow-gray-right.png');
-            $(this).css('border', '1px solid var(--background-color-secondary)');
-        }
-    );
-
-    $('#previous').hover(
-        function() {
-            $(this).css('background-image', 'url(../assets/arrow-blue-left.png');
-            $(this).css('border', '1px solid var(--foreground-color-primary)');
-            $(this).css('cursor', 'pointer');
-        },
-        function() {
-            $(this).css('background-image', 'url(../assets/arrow-gray-left.png');
-            $(this).css('border', '1px solid var(--background-color-secondary)');
-        }
-    );
 });

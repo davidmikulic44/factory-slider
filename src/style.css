@@ -120,12 +120,27 @@ body {
     height: 60px;
 }
 
+.button-container button:hover {
+    cursor: pointer;
+    
+}
+
 #next {
     background-image: url(../assets/arrow-gray-right.png);
 }
 
 #previous {
     background-image: url(../assets/arrow-gray-left.png);
+}
+
+#next:hover {
+    background-image: url(../assets/arrow-blue-right.png);
+    border: 1px solid var(--foreground-color-primary);
+}
+
+#previous:hover {
+    background-image: url(../assets/arrow-blue-left.png);
+    border: 1px solid var(--foreground-color-primary);
 }
 
 .text-container {
