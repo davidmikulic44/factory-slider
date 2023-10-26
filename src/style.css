@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&family=Roboto+Mono:wght@300&family=Source+Sans+3:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap');
 
 :root {
     --background-color-primary: #fff;
@@ -147,7 +147,6 @@ body {
 
 .text-container {
     width: auto;
-    height: 300px;
     background: var(--background-color-primary);
     line-height: 20px;
     margin-left: 10px;
@@ -158,10 +157,9 @@ body {
     font-weight: 700;
     font-size: 32px;
     font-style: normal;
-    line-height: normal;
+    line-height: 40px;
     letter-spacing: -0.2px;
     width: 300.93px;
-    height: 120px;
 }
 
 .text-container p {
@@ -172,5 +170,4 @@ body {
     line-height: 26px;
     letter-spacing: -0.2px;
     width: 300.93px;
-    height: 156px;
 }
