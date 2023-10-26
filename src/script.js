@@ -1,43 +1,43 @@
 $(document).ready(function() {
-    var $topSlider = $('.top-slider');
-    var $bottomSlider = $('.bottom-slider');
+    let $topSlider = $('.top-slider');
+    let $bottomSlider = $('.bottom-slider');
 
 
-    function moveImagesRight($slider) {
-        var $lastImage = $slider.children().last();
-        var imageWidth = $lastImage.width();
-
-        $lastImage.css({ 'opacity': 1, 'width': imageWidth })
-            .animate({ 'opacity': 0, 'width': 0 }, 
-            function() {
+    const moveImagesRight = ($slider) => {
+        const $lastImage = $slider.children().last();
+        const imageWidth = $lastImage.width();
+    
+        $lastImage
+            .css({ 'opacity': 1, 'width': imageWidth })
+            .animate({ 'opacity': 0, 'width': 0 }, () => {
                 $slider.prepend($lastImage);
                 $lastImage.css({ 'opacity': 1, 'width': imageWidth });
                 $slider.css({ 'left': -imageWidth }).animate({ 'left': 0 });
             });
-    }
+    };
 
 
-    function moveImagesLeft($slider) {
-        var $firstImage = $slider.children().first();
-        var imageWidth = $firstImage.width();
+    const moveImagesLeft = ($slider) => {
+        const $firstImage = $slider.children().first();
+        const imageWidth = $firstImage.width();
+    
+        $slider
+            .css({ 'left': 0 })
+            .animate({ 'left': -imageWidth }, 0, () => {
+                $slider.append($firstImage);
+                $firstImage.css({ 'opacity': 0, 'width': 0 })
+                    .animate({ 'opacity': 1, 'width': imageWidth });
+            });
+    };
 
-        $slider.css({ 'left': 0 })
-        .animate({ 'left': -imageWidth }, 0,
-         function() {
-            $slider.append($firstImage);
-            $firstImage.css({ 'opacity': 0, 'width': 0 })
-            .animate({ 'opacity': 1, 'width': imageWidth });
-        });
-    }
 
-
-    $('#previous').on('click', function() {
+    $('#previous').on('click', () => {
         moveImagesLeft($topSlider);
         moveImagesLeft($bottomSlider);
     });
 
 
-    $('#next').on('click', function() {
+    $('#next').on('click', () => {
         moveImagesRight($topSlider);
         moveImagesRight($bottomSlider);
     });
