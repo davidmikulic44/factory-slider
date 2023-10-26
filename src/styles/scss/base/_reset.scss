@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+body {
+    font-family: $fontPrimary;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+}
+
 button {
     background: none;
     border: none;
