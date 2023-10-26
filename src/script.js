@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() => {
     let $topSlider = $('.top-slider');
     let $bottomSlider = $('.bottom-slider');
 
@@ -6,13 +6,17 @@ $(document).ready(function() {
     const moveImagesRight = ($slider) => {
         const $lastImage = $slider.children().last();
         const imageWidth = $lastImage.width();
-    
+        
+        $('#next').css({'pointer-events':  'none'});
+
         $lastImage
             .css({ 'opacity': 1, 'width': imageWidth })
             .animate({ 'opacity': 0, 'width': 0 }, () => {
                 $slider.prepend($lastImage);
+
                 $lastImage.css({ 'opacity': 1, 'width': imageWidth });
                 $slider.css({ 'left': -imageWidth }).animate({ 'left': 0 });
+                $('#next').css({'pointer-events':  'auto'});
             });
     };
 
@@ -20,14 +24,18 @@ $(document).ready(function() {
     const moveImagesLeft = ($slider) => {
         const $firstImage = $slider.children().first();
         const imageWidth = $firstImage.width();
-    
+        
+        $('#previous').css({'pointer-events':  'none'});
         $slider
             .css({ 'left': 0 })
-            .animate({ 'left': -imageWidth }, 0, () => {
+            .animate({ 'left': -imageWidth }, () => {
+                
                 $slider.append($firstImage);
-                $firstImage.css({ 'opacity': 0, 'width': 0 })
+                $firstImage.css({ 'opacity': 0, 'width': 0 }, 1000)
                     .animate({ 'opacity': 1, 'width': imageWidth });
+                $('#previous').css({'pointer-events':  'auto'});
             });
+        
     };
 
 
