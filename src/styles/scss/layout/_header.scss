@@ -1,0 +1,21 @@
+.header {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 100px;
+    background-color: $backgroundPrimary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 19px;
+
+    .header--small {
+        width: 301px;
+        background-color: $backgroundSecondary;
+    }
+
+    .header--big {
+        width: 621px;
+        background-color: $backgroundSecondary;
+    }
+
+}
