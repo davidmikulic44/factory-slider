@@ -31,8 +31,8 @@ $(document).ready(() => {
             .animate({ 'left': -imageWidth }, () => {
                 
                 $slider.append($firstImage);
-                $firstImage.css({ 'opacity': 0, 'width': 0 }, 1000)
-                    .animate({ 'opacity': 1, 'width': imageWidth });
+                $firstImage.css({ width: 0 }).animate({ width: imageWidth });
+                $firstImage.css({ opacity: 0 }).animate({ opacity: 1 }, 700);
                 $('#previous').css({'pointer-events':  'auto'});
             });
         
