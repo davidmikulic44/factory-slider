@@ -1,0 +1,29 @@
+@import 'base/_fonts';
+@import 'base/_colors';
+@import 'base/_arrows';
+@import 'components/_images';
+@import 'components/_buttons';
+@import 'layout/_container';
+@import 'layout/_footer';
+@import 'layout/_header';
+@import 'layout/text-container';
+@import 'layout/bottom-slider';
+@import 'layout/top-slider';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $fontPrimary;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+}
+
+button {
+    background: none;
+    border: none;
+}
