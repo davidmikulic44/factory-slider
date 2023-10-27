@@ -5,8 +5,10 @@
     gap: 100px;
     margin-right: 50px;
     margin-top: 5px;
+}
 
-    .bottom-slider {
-        gap: 10px;
-    }    
+.bottom-slider {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }

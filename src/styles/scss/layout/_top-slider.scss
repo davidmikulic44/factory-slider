@@ -4,9 +4,10 @@
     justify-content: flex-end;
     margin-right: 50px;
     margin-bottom: 5px;
+}
 
-    .top-slider {
-        gap: 10px;
-    }
-
+.top-slider {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
