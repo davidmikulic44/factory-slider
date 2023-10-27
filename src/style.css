@@ -129,12 +129,10 @@ body {
 
 #next {
     background-image: url(../assets/arrow-gray-right.png);
-    transition: all 0.5s ease;
 }
 
 #previous {
     background-image: url(../assets/arrow-gray-left.png);
-    transition: all 0.5s ease;
 }
 
 #next:hover {

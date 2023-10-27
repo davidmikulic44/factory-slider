@@ -15,10 +15,5 @@
   "bugs": {
     "url": "https://github.com/davidmikulic44/factory-slider/issues"
   },
-  "homepage": "https://github.com/davidmikulic44/factory-slider#readme",
-  "dependencies": {
-    "@babel/cli": "^7.23.0",
-    "@babel/core": "^7.23.2",
-    "@babel/preset-env": "^7.23.2"
-  }
+  "homepage": "https://github.com/davidmikulic44/factory-slider#readme"
 }
