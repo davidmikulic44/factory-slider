@@ -22,20 +22,20 @@
     }
 
     #next {
-        background-image: url(../assets/arrow-gray-right.png);
+        background-image: url(../../../../assets/arrow-gray-right.png);
 
         &:hover {
-            background-image: url(../assets/arrow-blue-right.png);
-            border: 1px solid var(--foreground-color-primary);
+            background-image: url(../../../../assets/arrow-blue-right.png);
+            border: 1px solid $foregroundPrimary;
         }
     }
     
     #previous {
-        background-image: url(../assets/arrow-gray-left.png);
+        background-image: url(../../../../assets/arrow-gray-left.png);
 
         &:hover {
-            background-image: url(../assets/arrow-blue-right.png);
-            border: 1px solid var(--foreground-color-primary);
+            background-image: url(../../../../assets/arrow-blue-left.png);
+            border: 1px solid $foregroundPrimary;
         }
     }
     
