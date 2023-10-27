@@ -1,0 +1,12 @@
+.top-slider-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-bottom: 5px;
+
+    .top-slider {
+        gap: 10px;
+    }
+
+}
