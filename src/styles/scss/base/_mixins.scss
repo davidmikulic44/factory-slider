@@ -1,0 +1,16 @@
+@mixin button-style {
+    border: 1px solid $backgroundSecondary;
+    background-color: $backgroundPrimary;
+    border-radius: 5px;
+    transition: all 0.3s;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+}
+
+@mixin text-style {
+    font-style: normal;
+    letter-spacing: -0.2px;
+    width: 300.93px;
+}
