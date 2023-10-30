@@ -27,17 +27,17 @@
   cursor: pointer;
 }
 .button-container #next {
-  background-image: url(../../../../assets/arrow-gray-right.png);
+  background-image: url(../../../assets/arrow-gray-right.png);
 }
 .button-container #next:hover {
-  background-image: url(../../../../assets/arrow-blue-right.png);
+  background-image: url(../../../assets/arrow-blue-right.png);
   border: 1px solid #134880;
 }
 .button-container #previous {
-  background-image: url(../../../../assets/arrow-gray-left.png);
+  background-image: url(../../../assets/arrow-gray-left.png);
 }
 .button-container #previous:hover {
-  background-image: url(../../../../assets/arrow-blue-left.png);
+  background-image: url(../../../assets/arrow-blue-left.png);
   border: 1px solid #134880;
 }
 
